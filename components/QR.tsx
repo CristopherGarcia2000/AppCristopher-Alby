@@ -16,6 +16,7 @@ export default QR
 
 const styles = StyleSheet.create({
     bodyStyle: {
+        marginTop: 40,
         width: '100%',
         borderWidth: 2,
         borderColor: 'black',

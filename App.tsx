@@ -1,24 +1,23 @@
-import {  StyleSheet, View } from 'react-native';
+import { ImageBackground, StyleSheet, View } from 'react-native';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
-import Profile from './components/Profile';
-import Hobbies from './components/Hobbies';
+import HobbiesCris from './components/PortfolioCris';
 import QR from './components/QR';
 
+
 export default function App() {
-  const [displayMyQR, setDisplayMyQR] = useState(true);
+  const [displayPortfolio, setDisplayPortfolio] = useState(true);
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
         <Header />
-        <Navbar setDisplayMyQR={setDisplayMyQR} />
+        <Navbar setDisplayPortfolio={setDisplayPortfolio} />
       </View>
       {
-        displayMyQR ?
+        displayPortfolio ?
           <View style={styles.bodyStyle}>
-            <Profile/>
-            <Hobbies/>  
+              <HobbiesCris/>
           </View>
           :
           <QR/>
@@ -36,10 +35,11 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     height: '15%',
-    paddingTop: 50,
+    paddingTop: 60,
     width: '100%',
   },
   bodyStyle: {
+    marginTop: 40,
     width: '100%',
     borderWidth: 2,
     borderColor: 'black',
