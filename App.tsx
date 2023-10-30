@@ -12,10 +12,10 @@ export default function App() {
         <Header />
         <Navbar setDisplayPortfolio={setDisplayPortfolio} />
       {displayPortfolio ? (
-          <PortfolioAlby></PortfolioAlby>
-      ) : (
         <HobbiesCris></HobbiesCris>
-      )}
+        ) : (
+          <PortfolioAlby></PortfolioAlby>
+          )}
     </View>
   );
 }

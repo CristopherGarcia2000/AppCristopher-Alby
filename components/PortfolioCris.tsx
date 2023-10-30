@@ -11,7 +11,7 @@ const Hobbies = () => {
                 <Text style={styles.textStyle}>
                 😈¿Qué tal un truco de Magia?😈
                 </Text>
-                <Text>
+                <Text style={styles.textStyle}>
                 Fui fabricado hace mucho tiempo para entretener a un príncipe solitario, pero ahora me regocijo en la muerte y el caos.
                 </Text>
             </View>
@@ -19,8 +19,8 @@ const Hobbies = () => {
             <Text style={styles.titleStyle}>
                 Top 10 cosas favoritas:
             </Text>
-            <ScrollView style={{ padding:10}}>
-                
+            <ScrollView style={{ padding:10  }}>
+
                 <Text style={styles.textStyles}>Puñaladas en la espalda</Text>
                 <Text style={styles.textStyles}>Cajitas de Juguete</Text>
                 <Text style={styles.textStyles}>Bailar</Text>
@@ -30,6 +30,7 @@ const Hobbies = () => {
                 <Text style={styles.textStyles}>Apuñalar</Text>
                 <Text style={styles.textStyles}>Hacer el Gusano</Text>
                 <Text style={styles.textStyles}>Trucos de Magia</Text>
+    
             </ScrollView>
         </View>
         </ImageBackground>
@@ -40,23 +41,20 @@ export default Hobbies
 
 const styles = StyleSheet.create({
     titleStyle: {
-        color: 'black', 
+        color: '#b1cf72', 
         fontWeight: "900", 
         textTransform: 'capitalize', 
         fontSize: 20, 
         textAlign: 'center' 
     },
     textStyles: {
-        borderColor: 'black',
-        borderWidth: 1,
-        borderStyle: 'dashed',
         padding: 20,
-        color: 'darkred',
+        color: '#8f9e6f',
         textAlign: 'center',
         fontWeight: 'bold',
         fontStyle: 'italic',
         fontSize: 16,
-        backgroundColor: 'silver',
+        backgroundColor: 'transparent',
         
     },
     profileStyle: {
@@ -70,7 +68,7 @@ const styles = StyleSheet.create({
     },
     textBox: {
         margin: 10, 
-        backgroundColor: 'lightgray', 
+        backgroundColor: '#6b6b6b', 
         padding: 10, 
         borderRadius: 10, 
         width: '70%'
@@ -78,6 +76,8 @@ const styles = StyleSheet.create({
     textStyle: {
         textAlign: 'center', 
         fontWeight: '700', 
-        fontSize: 20 
+        fontSize: 20 ,
+        color: "#b1cf72"
+    
     }
 })
