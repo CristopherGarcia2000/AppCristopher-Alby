@@ -1,45 +1,50 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import React from "react";
 
 type NavbarProps = {
-  setDisplayPortfolio: Function
-}
+  setDisplayPortfolio: Function;
+};
 
 const Navbar = (props: NavbarProps) => {
-
   return (
     <View style={styles.navbar}>
-      <Image style={styles.avatar} source={require('./../assets/Shaco.jpg')} />
-      <Pressable style={styles.buttonStyle} onPress={() => props.setDisplayPortfolio(true)}>
-        <Text style={{ ...{ color: 'white', fontWeight: 'bold', textTransform: 'uppercase',fontSize:14 }, ...styles.boxShadow }}>Portfolio Cris</Text>
+      <Image style={styles.avatar} source={require("./../assets/Shaco.jpg")} />
+      <Pressable
+        style={styles.buttonStyle}
+        onPress={() => props.setDisplayPortfolio(true)}
+      >
+        <Text style={styles.ButtonText}> Portfolio Cris </Text>
       </Pressable>
-      
-      <Pressable onPress={() => props.setDisplayPortfolio(false)} style={styles.buttonStyle}  >
-        <Text style={{ ...{ color: 'white', fontWeight: 'bold', textTransform: 'uppercase',fontSize:14 }, ...styles.boxShadow }}>Portfolio Alby</Text>
-      </Pressable>
-      <Image style={styles.avatar} source={require('./../assets/Shaco.jpg')} />
-    </View>
-  )
-}
 
-export default Navbar
+      <Pressable
+        onPress={() => props.setDisplayPortfolio(false)}
+        style={styles.buttonStyle}
+      >
+        <Text style={styles.ButtonText}> Portfolio Alby </Text>
+      </Pressable>
+      <Image style={styles.avatar} source={require("./../assets/200w.gif")} />
+    </View>
+  );
+};
+
+export default Navbar;
 
 const styles = StyleSheet.create({
   navbar: {
     paddingHorizontal: 30,
-    flexDirection: 'row',
-    backgroundColor: 'darkgray',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%',
-    
+    flexDirection: "row",
+    backgroundColor: "#6b6b6b",
+    justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#8f9e6f",
+    borderStyle: "solid",
+  
   },
   buttonStyle: {
     marginHorizontal: 20,
     paddingVertical: 10,
-    width: '35%',
-    borderWidth: 1
-
+    width: "35%",
   },
   boxShadow: {
     shadowColor: "#000",
@@ -56,4 +61,13 @@ const styles = StyleSheet.create({
     width: 30,
     borderRadius: 100,
   },
-})
+  Text: {
+    textAlign: "center",
+  },
+  ButtonText: {
+    color: "#b1cf72",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    fontSize: 13,
+  }
+});
