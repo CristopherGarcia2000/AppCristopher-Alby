@@ -1,15 +1,17 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { CiDark } from 'react-icons/ci';
+import Ionicons from '@expo/vector-icons/Ionicons'
 
 type HeaderProps = {
-  setNightMode: Function;
+  setDayMode: Function;
 };
 
 const Header = (props: HeaderProps) => {
   return (
     <View>
-      <Text style={styles.header}>Portofolio <Pressable onPress={() => props.setNightMode(false)}><CiDark/></Pressable></Text>
+      <Text style={styles.titleStyle}>Portofolio <Pressable onPress={() => props.setDayMode(false)}>
+        <Ionicons name="moon" color={'white'} size={20}/></Pressable>
+      </Text>
     </View>
   );
 };
@@ -17,15 +19,17 @@ const Header = (props: HeaderProps) => {
 export default Header;
 
 const styles = StyleSheet.create({
-  header: {
+  
+  titleStyle: {
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
     fontSize: 30,
-    marginTop: 50,
-    width: "100%",
     backgroundColor: "#5e405f",
     color: "#b1cf72",
-    flex: 1
+    marginTop: 40,
+  },
+  pressableStyle: {
+    alignItems: 'center'
   }
 });

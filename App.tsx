@@ -12,11 +12,11 @@ import NPortfolioAlby from "./components/nightMode/NPortfolioAlby";
 
 export default function App() {
   const [displayPortfolio, setDisplayPortfolio] = useState(true);
-  const [nightMode , setNightMode] = useState(true)
+  const [dayMode , setDayMode] = useState(true)
   return (
-    nightMode ? (
+    dayMode ? (
     <View style={styles.container}>
-        <Header setNightMode={setNightMode}/>
+        <Header setDayMode={setDayMode}/>
         <Navbar setDisplayPortfolio={setDisplayPortfolio} />
       {displayPortfolio ? ( 
         <PortfolioCris />
@@ -25,7 +25,7 @@ export default function App() {
           )}
     </View>):(
     <View style={styles.containerN}>
-      <NHeader setNightMode={setNightMode}></NHeader>
+      <NHeader setDayMode={setDayMode}></NHeader>
       <NNavbar setDisplayPortfolio={setDisplayPortfolio} />
       {displayPortfolio ? (
       <NPortfolioCris></NPortfolioCris>
@@ -38,11 +38,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
     container:{
-      flex: 1,
       backgroundColor: "#4f364c"
     },
     containerN:{
-      flex: 1,
       backgroundColor: "black"
     }
 });

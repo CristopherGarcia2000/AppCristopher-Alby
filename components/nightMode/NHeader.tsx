@@ -1,15 +1,18 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { CiSun } from 'react-icons/ci';
+import Ionicons from '@expo/vector-icons/Ionicons'
 
 type HeaderProps = {
-  setNightMode: Function;
+  setDayMode: Function;
 };
 
 const Header = (props: HeaderProps) => {
   return (
     <View>
-      <Text style={styles.header}>Portofolio <Pressable onPress={() => props.setNightMode(true)}><CiSun/></Pressable></Text>
+      <Text style={styles.header}>Portofolio <Pressable onPress={() => props.setDayMode(true)}>
+        <Ionicons name="sunny" color={'white'} size={20}/></Pressable>
+      </Text>
     </View>
   );
 };
@@ -26,6 +29,5 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "black",
     color: "#fff",
-    flex: 1
   }
 });

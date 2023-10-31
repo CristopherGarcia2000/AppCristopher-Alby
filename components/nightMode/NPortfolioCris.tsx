@@ -19,7 +19,7 @@ const Hobbies = () => {
             <Text style={styles.titleStyle}>
                 Top 10 cosas favoritas:
             </Text>
-            <ScrollView style={{ padding:10  }}>
+            <ScrollView style={{ padding:10,height: '60%' }}>
 
                 <Text style={styles.textStyles}>Puñaladas en la espalda</Text>
                 <Text style={styles.textStyles}>Cajitas de Juguete</Text>

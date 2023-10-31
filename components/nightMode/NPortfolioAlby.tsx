@@ -11,7 +11,7 @@ import React from "react";
 const PortfolioAlby = () => {
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <View>
         <Image style={styles.avatar} source={require("./../../assets/xd2.gif")} />
         <View style={styles.profileStyle}>
           <ImageBackground
@@ -27,7 +27,7 @@ const PortfolioAlby = () => {
           </ImageBackground>
         </View>
         <Text style={styles.titleStyle}>Hobbies : </Text>
-        <ScrollView style={{padding : 10}}>
+        <View style={{padding : 10, height: '46%'}}>
           <View style={styles.cajas}>
             <Text style={styles.textStyles}>Bailar</Text>
             <Text style={styles.textStyles}>Tepearse</Text> 
@@ -40,8 +40,8 @@ const PortfolioAlby = () => {
             <Text style={styles.textStyles}>Clutch 1 v 5</Text>
             <Text style={styles.textStyles}>Best Adc</Text>
           </View>
-        </ScrollView>
-      </ScrollView>
+        </View>
+      </View>
     </View>
   );
 };
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     width: "90%",
     borderRadius: 100,
   },
-  fondo:{
+  fondo: {
     width: "100%",
     border: 'solid',
     borderRadius: 10,
@@ -112,9 +112,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: "100%",
     padding: 10,
-    
+
 
   },
-  
+
 
 });
